@@ -1,0 +1,46 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 13,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "rules": {
+        "@typescript-eslint/no-unused-vars": [
+            "warn", // or "error"
+            {
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_"
+            }
+        ],
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+
+        "import/no-extraneous-dependencies": "off",
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        ]
+    }
+}
